@@ -21,7 +21,7 @@ LustraLastBoss.onEvent = function(this, event, arg1, arg2, arg3, arg4)
 		SendChatMessage(text1, "SAY")
 	elseif(string.find(arg1, "groźnie prycha...")) then
 		local text = "UWAGA! |H|h|cff4169E1UCIEKAĆ|r|h"
-		local text1 = "UWAGA! Frontal"
+		local text1 = "UWAGA! UCIEKAĆ"
 		DEFAULT_CHAT_FRAME:AddMessage(text)
 		SendChatMessage(text, "PARTY")
 		SendChatMessage(text1, "SAY")
@@ -37,13 +37,18 @@ LustraLastBoss.onEvent = function(this, event, arg1, arg2, arg3, arg4)
 		DEFAULT_CHAT_FRAME:AddMessage(text)
 		SendChatMessage(text, "PARTY")
 		SendChatMessage(text1, "SAY")
-		-- local text = "UWAGA! |H|h|cffff1111UCIEKAC|r|h"
-		--bonus 4 boss aoe:
+		--bonus 4 boss dla pepeg
 	elseif(string.find(arg1,"Twoja jedność będzie twoim końcem!")) then
-		local text = "UWAGA! |H|h|cffff1111AOE :f |r|h"
-		local text1 = "UWAGA! AOE"
+		local text = "UWAGA! |H|h|cffff1111AOE % |r|h"
+		local text1 = "UWAGA! AOE %"
 		DEFAULT_CHAT_FRAME:AddMessage(text)
 		SendChatMessage(text, "PARTY")
 		SendChatMessage(text1, "SAY")
+	elseif(string.find(arg1,"Tu nie jest twoje miejsce...")) then
+		local text = "UWAGA! |H|h|cffff1111WIR |r|h"
+		local text1 = "UWAGA! WIR %"
+		DEFAULT_CHAT_FRAME:AddMessage(text)
+		SendChatMessage(text, "PARTY")
+		SendChatMessage(text1, "SAY")		
 	end
 end;
